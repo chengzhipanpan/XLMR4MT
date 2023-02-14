@@ -4,16 +4,13 @@ export PYTHONPATH=/mnt/petrelfs/wubohong/.conda/envs/py37:$PYTHONPATH # /path/to
 export USE_TF=0
 export USE_TORCH=1
 
-src=$1
-suffix=$2
-
-save_path="/mnt/petrelfs/wubohong/test_clean_code_xlmr_sga/ted_de_en"  # "/path/to/save"
-CKPT="/mnt/petrelfs/wubohong/PRETRAIN/xlmr_roberta_base_hf/" # "/path/to/pretrained/xlmr"
+save_path="/mnt/petrelfs/xujingjing/zhaochenyang/ckpt"  # "/path/to/save"
+CKPT="/mnt/petrelfs/xujingjing/zhaochenyang/model/xlm-roberta-base" # "/path/to/pretrained/xlmr"
 mkdir -p ${save_path}
-data_path="/mnt/petrelfs/wubohong/U4Gdata/tedtalks_v2/de_XX-en_XX/train.de_XX2en_XX" # /path/to/data
+data_path="/mnt/petrelfs/xujingjing/xujingjing/ted/de_en/train.merged" # /path/to/data
 
 python $CODES/thumt/bin/trainer.py \
-    --output ${save_path}/${suffix} \
+    --output ${save_path}/test_output \
     --input ${data_path} \
     --model xlmr_sga \
     --ptm $CKPT \
