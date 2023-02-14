@@ -26,7 +26,7 @@ TL;DR: 我加了很多 alias，同时自己的配置文件在 `/mnt/lustre/xujin
 
 英德数据集储存在 `/mnt/petrelfs/xujingjing/xujingjing/ted/de_en/`，请注意这个路径下的文件都是纯粹的文本文件，而不是二进制数据段。可以直接使用 `tf(tail -f)` 或者 `less` 查看。
 
-按照 bohong 的处理需求，我将混合后的训练数据集存储在 ``/mnt/petrelfs/xujingjing/xujingjing/ted/de_en/train.merged`，而预处理代码位于 `/mnt/lustre/xujingjing/zhaochenyang/XLMR4MT/scripts/data_prepare.py`。
+按照 bohong 的处理需求，我将混合后的训练数据集存储在 `/mnt/petrelfs/xujingjing/xujingjing/ted/de_en/train.merged`，而预处理代码位于 `/mnt/lustre/xujingjing/zhaochenyang/XLMR4MT/scripts/data_prepare.py`。
 
 ## 运行
 
