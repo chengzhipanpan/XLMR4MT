@@ -427,8 +427,6 @@ def main(args):
     optimizer = optimizers.MultiStepOptimizer(optimizer,
                                               params.update_cycle)
 
-
-    print("Currently, showing trainable Flags >>> ")
     trainable_flags = print_variables(model, params.pattern,
                                       dist.get_rank() == 0)
 
